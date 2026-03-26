@@ -80,7 +80,7 @@ export default function BottomNav() {
                       alt='menu'
                       width={10}
                       height={10}/>
-                      
+
                   </button>
 
                   <div className='absolute left-0 top-full hidden min-w-[180px] rounded-lg border-grav-100 bg-white p-2 shadow-xl group-hover:block'>
@@ -88,7 +88,7 @@ export default function BottomNav() {
                       <Link
                         key={item.label}
                         href={item.href}
-                        className='font-golos block rounded-md px-4 py-2 text-[var(--black)] transition-colors hover:bg-var(--prim-light)'>
+                        className='font-golos block rounded-md px-4 py-2 text-[var(--black)] font-golos font-bold text-[var(--black)] transition-colors hover:text-[var(--second)]'>
                         {item.label}
                       </Link>
 
@@ -112,24 +112,31 @@ export default function BottomNav() {
                 </Link>
               )
             )}
-
-            {/*Redes socias*/}
-            <div className="mt-4 flex items-center gap-4 px-2 text-2xl text-[var(--black)]">
-              <Link href='/' aria-label='Instagram'>
-                <i className='bi bi-instagram transition-colors hover:text-[var([--second)]'></i>
-              </Link>
-
-              <Link href='/' aria-label='WhatsApp'>
-                <i className='bi bi-whatsapp transition-colors hover:text-[var([--second)]'></i>
-              </Link>
-
-              <Link href='/' aria-label='facebook'>
-                <i className='bi bi-facebook transition-colors hover:text-[var([--second)]'></i>
-              </Link>
-            </div>
-
           </nav>
         </div>
+
+        {/*Direita desktop*/}
+
+        <div className='hidden items-center gap-6 lg:flex'>
+            <Link
+            href='/'
+            className='font-golos border-b transition-colors hover:text-[var(--second)] border-gray-400 font-semibold text-[var(--black)]'>
+              Login / Cadastro
+            </Link>
+
+            <Link 
+              href='/'
+              className='relative text-3xl text-[var(--black)] transition-colors hover:text-[var(--second)]' 
+              aria-label='Carrinho'>
+              <i className='bi bi-cart3'></i>
+              <span className='absolute -right-2 -top-2 flex h-5 w-5 items-center justify-center rounded-full bg-black  text-xs text-white'>
+                67
+              </span>
+              </Link>
+        </div>
+
+            
+
       </div>
     </div>
   )
