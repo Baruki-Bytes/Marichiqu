@@ -73,6 +73,113 @@ body {
   z-index: 9999;
 }
 
+.hero-image{
+  position: relative;
+  z-index: 1;
+}
+
+
+
+.hero-image::after{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 90%;
+  height: 78%;
+  background: var(--gradient);
+  z-index: 0;
+  border-radius: 125px 30px 30px 30px;
+}
+
+.hero-shape1{
+  position: absolute;
+  top: 21%;
+  right: 0%;
+  width: 260px;
+  height: 35px;
+  background-image: url('../../public/wave-shape-1.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero-shape2{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 150px;
+  height: 30px;
+  transform: rotate(180deg);
+  background-image: url('../../public/wave-shape-1.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.border-shap1{
+  border: 1px solid #dfdfdf;
+  position: absolute;
+  top: 10%;
+  left: -8%;
+  width: 61%;
+  height: 54%;
+  border-radius: 150px 0 0 0;
+  z-index: -1;
+}
+
+.border-shap2{
+  border: 1px solid #dfdfdf;
+  position: absolute;
+  bottom: -7%;
+  right: 1%;
+  width: 50%;
+  height: 35%;
+  border-radius: 0 0 50px 0;
+}
+
+.star-shape{
+  position: absolute;
+  top: -2%;
+  left: 0;
+  width: 70px;
+  height: 70px;
+  background-image: url('../../public/hero-shape2.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+  animation: anim-rotate 5s infinite forwards linear;
+}
+
+.star-shape2{
+  position: absolute;
+  top: 40%;
+  right: 0;
+  width: 70px;
+  height: 70px;
+  background-image: url('../../public/hero-shape2.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+  animation: anim-rotate 6s infinite forwards linear;
+}
+
+.star-shape3{
+  position: absolute;
+  top: 75%;
+  left: -12%;
+  width: 70px;
+  height: 70px;
+  background-image: url('../../public/hero-shape2.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+  animation: anim-rotate 7s infinite forwards linear;
+}
+
+@keyframes anim-rotate {
+  100%{
+    transform: rotate(360deg);
+  }
+}
 
 @keyframes anim-fixed {
     0% {
