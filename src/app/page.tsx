@@ -1,4 +1,4 @@
-import Index from "@/components/Home"
+import Index from "@/app/UI-Components"
 
 export default function Home() {
 
